@@ -1,0 +1,32 @@
+{
+  "namespace": "com.github.bohunn",
+  "type": "record",
+  "name": "com.github.bohunn.Value",
+  "fields":[
+    {
+      "type":"int",
+      "optional": true,
+      "name":"id"
+    },
+    {
+      "type":"string",
+      "optional": true,
+      "name":"first_name"
+    },
+    {
+      "type":"string",
+      "optional": true,
+      "name":"last_name"
+    },
+    {
+      "type":"string",
+      "optional": true,
+      "name":"email"
+    },
+    {
+      "type":"string",
+      "optional": true,
+      "name":"gender"
+    }
+  ]
+}

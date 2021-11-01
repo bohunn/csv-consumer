@@ -62,17 +62,21 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>io.apicurio</groupId>
-      <artifactId>apicurio-registry-utils-serde</artifactId>
-      <version>1.2.2.Final</version>
-      <exclusions>
-        <exclusion>
-          <groupId>org.jboss.spec.javax.interceptor</groupId>
-          <artifactId>jboss-interceptors-api_1.2_spec</artifactId>
-        </exclusion>
-      </exclusions>
+      <groupId>io.confluent</groupId>
+      <artifactId>kafka-avro-serializer</artifactId>
+      <version>5.3.0</version>
     </dependency>
   </dependencies>
+
+    <repositories>
+        <repository>
+            <id>confluent</id>
+            <url>https://packages.confluent.io/maven/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
   <build>
     <plugins>
       <plugin>
@@ -102,7 +106,7 @@
             </goals>
             <configuration>
               <sourceDirectory>src/main/avro</sourceDirectory>
-              <outputDirectory>${project.build.directory}/generated-sources</outputDirectory>
+              <outputDirectory>${project.build.sourceDirectory}/generated-sources</outputDirectory>
               <stringType>String</stringType>
             </configuration>
           </execution>
